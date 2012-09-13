@@ -21,7 +21,7 @@ class ActiveSupport::TestCase
   end
 
   def db_adapter
-    ::ActiveRecord::Base.configurations[Rails.env]['adapter']
+    ::ActiveRecord::Base.connection_config[:adapter]
   end
 
   def build_admin

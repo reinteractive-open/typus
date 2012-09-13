@@ -146,7 +146,7 @@ module Typus
         end
 
         def adapter
-          @adapter ||= ::ActiveRecord::Base.configurations[Rails.env]['adapter']
+          @adapter ||= ::ActiveRecord::Base.connection_config[:adapter]
         end
 
         def typus_user_id?; end
